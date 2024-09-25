@@ -1,16 +1,18 @@
+import { useState } from "react";
 
 
 const Nav = () => {
+    const [theme, setTheme] = useState('light')
     return (
         <div className="navbar bg-base-100 shadow-lg px-4 fixed z-10">
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">con_spa_nav</a>
+                <a className="btn btn-ghost gap-0 text-secondary text-xl">con_<span className="text-primary">spa_nav</span></a>
             </div>
             <div className="flex-none">
                 <ul className="menu menu-horizontal px-1">
-                    <li><a>Home</a></li>
-                    <li><a>Blogs</a></li>
-                    <li><a>Bookmarks</a></li>
+                    <li className="font-bold"><a>Home</a></li>
+                    <li className="font-bold text-primary"><a>Blogs</a></li>
+                    <li className="font-bold"><a>Bookmarks</a></li>
 
                 </ul>
                 {/* this is theme controler */}
